@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chat.MobileApp.NewMessagePage"
+             Title="New Message">
+
+    <StackLayout Padding="20">
+
+      
+        <Label FontSize="Small"
+               Text="Your Message"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand">
+        </Label>
+
+        <Editor TextColor="Black"
+                HeightRequest="100"
+               x:Name="txtMessage"
+               Margin="20,0,20,10"
+               HorizontalOptions="FillAndExpand">
+        </Editor>
+
+    
+        <Button Text="Send"
+                BackgroundColor="Red"
+                TextColor="White"
+                Opacity=".8"
+                Clicked="Button_Clicked"></Button>
+
+    </StackLayout>
+</ContentPage>

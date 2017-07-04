@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chat.MobileApp.LoginPage">
+
+    <StackLayout Padding="20" BackgroundColor="White" Spacing="10">
+        <Label FontSize="Medium"
+               Margin="0,0,0,20"
+               Text="Welcome.."
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand">
+        </Label>
+
+        <Label FontSize="Small"
+               Text="First Name"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand">
+        </Label>
+
+        <Entry TextColor="Black"
+               x:Name="txtFirstName"
+               Placeholder=""
+               HorizontalTextAlignment="Center"
+               Margin="20,0,20,10"
+               HorizontalOptions="FillAndExpand">
+        </Entry>
+
+        <Label FontSize="Small"
+               Text="LastName"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand">
+        </Label>
+
+        <Entry TextColor="Black"
+               x:Name="txtLastName"
+               Placeholder=""
+               HorizontalTextAlignment="Center"
+               Margin="20,0,20,10"
+               HorizontalOptions="FillAndExpand">
+        </Entry>
+        
+
+        <Label FontSize="Small"
+               Text="Username"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand"> 
+        </Label>
+
+        <Entry TextColor="Black"
+               x:Name="txtUsername"
+               Placeholder=""
+               Margin="20,0,20,10"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="FillAndExpand">
+        </Entry>
+
+        <Button Text="Login"
+                BackgroundColor="Red"
+                TextColor="White"
+                Opacity=".8"
+                Clicked="Button_Clicked"></Button>
+        
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Chat.MobileApp"
+             x:Class="Chat.MobileApp.MainPage"
+             Title="Messages">
+
+    <StackLayout>
+        <Button Text="Broadcast a new message"
+                BackgroundColor="Red"
+                TextColor="White"
+                Opacity=".8"
+                Clicked="Button_Clicked"></Button>
+        <ListView x:Name="messagesListView"
+                  BackgroundColor="Transparent"
+                  CachingStrategy="RecycleElement" 
+                  HasUnevenRows="True" 
+                  SeparatorVisibility="None"
+                  ItemSelected="messagesListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal"
+                                 Padding="10">
+
+                            <Label TextColor="Black"
+                               FontSize="Small"
+                               Text="{Binding SenderUser.Username, StringFormat='{0}: '}"></Label>
+                            
+                            <Label TextColor="Black"
+                               FontSize="Small"
+                               Text="{Binding MessageText}"></Label>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
